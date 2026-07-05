@@ -9,6 +9,7 @@
 * [SMTP Enumeration](information-gathering/smtp-enumeration.md)
 * [SNMP Enumeration](information-gathering/snmp-enumeration.md)
 * [WordPress Scanning](information-gathering/wordpress-scanning.md)
+* [NXC - Net Exec](information-gathering/nxc-net-exec.md)
 
 ## Web Attacks
 
@@ -57,7 +58,7 @@
 
 ## File Transfers
 
-* [Capstone Lab Notes](file-transfers/capstone-notes.md)
+* [File Transfering](file-transfers/capstone-notes.md)
 
 ## Reverse Shells
 
