@@ -1,16 +1,19 @@
 # Port Scanning
 
 **Netcat TCP scan:**
+
 ```bash
 for port in $(seq 1 1000); do nc -nvvz -w 1 <ip> $port; done
 ```
 
 **Netcat UDP scan:**
+
 ```bash
 for port in $(seq 1 100); do nc -nvvzu -w 1 <ip> $port; done
 ```
 
-**Nmap:**
+#### NMAP scanning
+
 ```bash
 # Host discovery ping sweep
 sudo nmap -sn 192.168.50.0/24 -oA sweep-scan -vv
@@ -23,14 +26,23 @@ sudo nmap -sS -sU <ip>
 ```
 
 **Useful Nmap flags:**
-- `--min-rate 1000` — enforces minimum probe rate (overrides congestion throttling)
-- `--max-rtt-timeout 200ms` — cap wait time on unresponsive ports
-- `--max-retries 2` — stop reprobing non-responsive ports
-- `--min-hostgroup 16` — process more hosts concurrently
+
+* `--min-rate 1000` — enforces minimum probe rate (overrides congestion throttling)
+* `--max-rtt-timeout 200ms` — cap wait time on unresponsive ports
+* `--max-retries 2` — stop reprobing non-responsive ports
+* `--min-hostgroup 16` — process more hosts concurrently
 
 > When nmap throttles (you see "Increasing send delay" messages), rerun with `--min-rate 1000 --max-retries 2`.
 
+#### Nmap over socks5 proxy
+
+```powershell
+# Single port
+sudo nmap -sT -v -n <ip-address> -oN scan.nmap -Pn
+```
+
 **PowerShell port scanning:**
+
 ```powershell
 # Single port
 Test-NetConnection -Port 445 192.168.50.151
