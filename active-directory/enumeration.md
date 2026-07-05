@@ -1,4 +1,4 @@
-# Enumeration
+# Initial Recon
 
 ## net.exe
 
@@ -11,11 +11,12 @@ net accounts                            # account/password policy
 ```
 
 **Check if machine is domain-joined:**
+
 ```powershell
 (Get-WmiObject Win32_ComputerSystem).PartOfDomain
 ```
 
----
+***
 
 ## .NET — Find PDC
 
@@ -29,7 +30,7 @@ $LDAP = "LDAP://$PDC/$DN"
 $LDAP
 ```
 
----
+***
 
 ## PowerView
 
@@ -69,30 +70,33 @@ Find-DomainShare -CheckShareAccess    # only shares accessible to current user
 
 **Key ACE permissions:**
 
-| Permission | Effect |
-|---|---|
-| `GenericAll` | Full control over the object |
-| `GenericWrite` | Edit certain attributes |
-| `WriteOwner` | Change object ownership |
-| `WriteDACL` | Edit ACEs on the object |
-| `AllExtendedRights` | Change/reset passwords |
-| `ForceChangePassword` | Reset password without knowing current |
-| `Self (Self-Membership)` | Add ourselves to a group |
+| Permission               | Effect                                 |
+| ------------------------ | -------------------------------------- |
+| `GenericAll`             | Full control over the object           |
+| `GenericWrite`           | Edit certain attributes                |
+| `WriteOwner`             | Change object ownership                |
+| `WriteDACL`              | Edit ACEs on the object                |
+| `AllExtendedRights`      | Change/reset passwords                 |
+| `ForceChangePassword`    | Reset password without knowing current |
+| `Self (Self-Membership)` | Add ourselves to a group               |
 
----
+***
 
 ## SYSVOL — GPP Passwords
 
 SYSVOL share is available to all domain users:
+
 ```cmd
 ls \\dc1.corp.com\sysvol\corp.com\
 ```
+
 May contain GPP (Group Policy Preferences) encrypted passwords. Decrypt with:
+
 ```bash
 gpp-decrypt <cpassword-value>
 ```
 
----
+***
 
 ## SharpHound & BloodHound
 
@@ -104,6 +108,7 @@ Invoke-BloodHound -CollectionMethod All -OutputDirectory C:\Users\stephanie\Desk
 ```
 
 **Running SharpHound with specific credentials:**
+
 ```powershell
 Invoke-BloodHound -CollectionMethod All -LdapUserName john -LdapPassword dqsTwTpZPn#nL -Domain beyond.com
 ```
@@ -115,3 +120,8 @@ bloodhound-start           # drag the zip file into BloodHound
 ```
 
 > Mark every owned object in BloodHound to reveal attack paths. SharpHound results are only as good as the user who ran it — manually verify paths the tool might miss.
+
+### Share Enumeration
+
+`smbclient //192.168.201.97/test --user=secura.zyx/eric.wallows%EricLikesRunning800`
+
