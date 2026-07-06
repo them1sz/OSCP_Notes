@@ -10,6 +10,7 @@
 * [SNMP Enumeration](information-gathering/snmp-enumeration.md)
 * [WordPress Scanning](information-gathering/wordpress-scanning.md)
 * [NXC - Net Exec](information-gathering/nxc-net-exec.md)
+* [Interesting Filesystem folders](information-gathering/interesting-filesystem-folders.md)
 
 ## Web Attacks
 
@@ -61,6 +62,10 @@
 * [File Transfering](file-transfers/capstone-notes.md)
 
 ## Reverse Shells
+
+***
+
+* [Various Reverse Shells](various-reverse-shells.md)
 
 ## Authentication Attacks
 
