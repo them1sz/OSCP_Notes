@@ -23,7 +23,7 @@ bloodhound-start           # drag the zip file into BloodHound
 
 > Mark every owned object in BloodHound to reveal attack paths. SharpHound results are only as good as the user who ran it — manually verify paths the tool might miss.
 
-### Cypher Queries
+### Basic Cypher Queries
 
 Users Enumeration: `MATCH (m:Users) RETURN m`
 

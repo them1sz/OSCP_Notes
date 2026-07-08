@@ -45,7 +45,7 @@
 
 ## Password Attacks
 
-* [Brute Force](password-attacks/brute-force.md)
+* [Brute Force Attacks](password-attacks/brute-force.md)
 * [Hash Cracking](password-attacks/hash-cracking.md)
 * [Mimikatz & Windows Hashes](password-attacks/mimikatz-windows-hashes.md)
 * [Pass-the-Hash](password-attacks/pass-the-hash.md)
@@ -56,10 +56,11 @@
 * [Key Concepts & Architecture](active-directory/key-concepts.md)
 * [Initial Recon](active-directory/enumeration.md)
 * [BloodHound](active-directory/bloodhound.md)
+* [Share Enumeration](active-directory/share-enumeration.md)
 
 ## File Transfers
 
-* [File Transfering](file-transfers/capstone-notes.md)
+* [File Transfering & Downloading](file-transfers/capstone-notes.md)
 
 ## Reverse Shells
 

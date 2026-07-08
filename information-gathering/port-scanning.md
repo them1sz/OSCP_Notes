@@ -36,12 +36,11 @@ sudo nmap -sS -sU <ip>
 
 #### Nmap over socks5 proxy
 
-```powershell
-# Single port
+```bash
 sudo nmap -sT -v -n <ip-address> -oN scan.nmap -Pn
 ```
 
-**PowerShell port scanning:**
+**PowerShell Port Scanning:**
 
 ```powershell
 # Single port

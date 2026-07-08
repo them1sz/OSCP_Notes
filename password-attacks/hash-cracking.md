@@ -7,7 +7,7 @@ hashid <hash>
 hash-identifier
 ```
 
----
+***
 
 ## Hashcat Rules
 
@@ -28,28 +28,31 @@ hashcat -m 0 md5-hash --show
 ```
 
 **Rule function reference:**
-- `$X` — append character X
-- `^X` — prepend character X
-- `u` — uppercase all
-- `d` — duplicate password
 
----
+* `$X` — append character X
+* `^X` — prepend character X
+* `u` — uppercase all
+* `d` — duplicate password
+
+***
 
 ## JtR Custom Rules
 
-```text
+```
 # File: sshrules
 [List.Rules:sshrules]
 c $1 $3 $7 $!
 c $1 $3 $7 $@
 c $1 $3 $7 $#
 ```
+
 Append to `/etc/john/john.conf`, then use:
+
 ```bash
 john --rules=sshrules --wordlist=wordlist.txt hash.txt
 ```
 
----
+***
 
 ## KeePass Database Cracking
 
@@ -65,7 +68,7 @@ hashcat -m 13400 keepass.hash /usr/share/wordlists/rockyou.txt -r /usr/share/has
 
 > `rockyou-30000.rule` is specifically designed for use with `rockyou.txt`.
 
----
+***
 
 ## SSH Passphrase Cracking
 
@@ -73,3 +76,22 @@ hashcat -m 13400 keepass.hash /usr/share/wordlists/rockyou.txt -r /usr/share/has
 ssh2john id_rsa > ssh.hash
 john --wordlist=/usr/share/wordlists/rockyou.txt ssh.hash
 ```
+
+## NTLM Hash - NTHash Cracking
+
+Hashes extracted through `mimikatz.exe`&#x20;
+
+```bash
+hashcat -m 1000 ntlm.hash /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/best66.rule --force
+```
+
+## NET-NTLM Hash Cracking
+
+NET-NTLM can be either harvested using tools such as `Responder` or by forcing domain devices to authenticate on our machine through specific protocols (e.g., SMB). For example forcing a plugin's backup mechanism to store data inside a "rogue" UNC path.
+
+```bash
+hashcat -m 5600 captured.hash /usr/share/wordlists/rockyou.txt --force
+```
+
+
+
