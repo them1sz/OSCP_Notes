@@ -26,6 +26,10 @@ wget https://github.com/tylerdotrar/SigmaPotato/releases/download/v1.2.6/SigmaPo
 
 ***
 
+#### Potatos
+
+
+
 ## SeBackupPrivilege — Extract SAM/SYSTEM Hive
 
 ```cmd

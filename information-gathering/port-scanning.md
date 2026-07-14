@@ -34,6 +34,14 @@ sudo nmap -sS -sU <ip>
 
 > When nmap throttles (you see "Increasing send delay" messages), rerun with `--min-rate 1000 --max-retries 2`.
 
+#### &#x20;NMAP NSE Engine scripts&#x20;
+
+`` /usr/share/nmap/scripts/` ``&#x20;
+
+Run a specific script or all scripts `sudo nmap --script="smtp-*" 192.168.182.189`
+
+
+
 #### Nmap over socks5 proxy
 
 ```bash

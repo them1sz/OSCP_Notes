@@ -11,6 +11,7 @@
 * [WordPress Scanning](information-gathering/wordpress-scanning.md)
 * [NXC - Net Exec](information-gathering/nxc-net-exec.md)
 * [Interesting Filesystem folders](information-gathering/interesting-filesystem-folders.md)
+* [Finding Exploits](information-gathering/finding-exploits.md)
 
 ## Web Attacks
 
@@ -33,6 +34,7 @@
 * [Unquoted Service Paths](windows-privesc/unquoted-service-paths.md)
 * [Scheduled Tasks](windows-privesc/scheduled-tasks.md)
 * [Special Privileges](windows-privesc/special-privileges.md)
+* [Automation](windows-privilege-escalation/automation.md)
 
 ## Linux Privilege Escalation
 
@@ -82,11 +84,6 @@
 * [Pass / Over-Pass / Pass-the-Ticket](active-directory/lateral-movement/pass-overpass-ticket.md)
 * [DCOM](active-directory/lateral-movement/dcom.md)
 
-## Persistence
-
-* [Golden Tickets](active-directory/persistence/golden-tickets.md)
-* [Shadow Copies (NTDS.dit)](active-directory/persistence/shadow-copies.md)
-
 ## Port Forwarding & Tunneling
 
 * [Socat](port-forwarding/socat.md)
@@ -102,3 +99,8 @@
 ## Linux Basics
 
 * [Linux Basics](linux-basics.md)
+
+## Persistence
+
+* [Golden Tickets](active-directory/persistence/golden-tickets.md)
+* [Shadow Copies (NTDS.dit)](active-directory/persistence/shadow-copies.md)
