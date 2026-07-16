@@ -8,7 +8,7 @@ Accessing Systems
 
 ***
 
-## Windows Privileges & Access Controls
+### Windows Privileges & Access Controls
 
 **Security Identifiers (SIDs):** Format: `S-R-X-Y` where R=revision(1), X=authority(5=NT Authority), Y=sub-authorities+RID.
 
@@ -22,59 +22,59 @@ S-1-5-domainidentifier-500    Administrator
 
 > RID ≥ 1000 → user-created principal (RID 1000 = first local user, etc.)
 
-## System Enumeration Commands
+### System Enumeration
 
 {% tabs %}
 {% tab title="CMD" %}
-```cmd
-hostname          ## Machine hostname
-whoami            ## Logged in user
-whoami /groups    ## Groups that the user is part of 
-whoami /priv      ## Special privileges (e.g., SeImpersonatePrivilege)
-systeminfo        ## System information (patches, version..)
-ipconfig /all     ## List everything 
-route print       ## Print routes (e.g., to different subnetworks)
-netstat -ano      ## Active TCP/UDP connections
+```ps
+hostname          # Machine hostname
+whoami            # Logged in user
+whoami /groups    # Groups that the user is part of 
+whoami /priv      # Special privileges (e.g., SeImpersonatePrivilege)
+systeminfo        # System information (patches, version..)
+ipconfig /all     # List everything 
+route print       # Print routes (e.g., to different subnetworks)
+netstat -ano      # Active TCP/UDP connections
+dir /a            # Hidden directories (.git, AppData etc)
+```
+{% endtab %}
 
-net user                  ## Machine local users
-net user <user> /domain   ## Domain users 
+{% tab title="PowerShell" %}
+```powershell
+Get-Process                    # Running processes
+ls -Force                      # Hidden directories
+Get-ChildItem -Force | Format-List -Property Name, Attributes
+```
+{% endtab %}
+{% endtabs %}
 
-## Hidden directories (.git, AppData etc)
-dir /a 
+### Registry Enumeration
+
+{% tabs %}
+{% tab title="CMD" %}
+```powershell
+# 32-bit installed apps
+Get-ItemProperty "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*" | select displayname
+
+# 64-bit installed apps
+Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*" | select displayname
 
 ```
 {% endtab %}
 
 {% tab title="PowerShell" %}
-
+```powershell
+```
 {% endtab %}
 {% endtabs %}
 
+### File Searching
+
 ```powershell
-
-Get-LocalUser          # all local users
-net localgroup / Get-LocalGroup   # local groups
-Get-LocalGroupMember <group>      # members of specific group
-systeminfo                        # OS version, architecture
-ipconfig /all                     # all network interfaces
-route print                       # routing table (discover other subnets)
-netstat -ano                      # active TCP/UDP connections with PIDs
-Get-Process                       # running processes
-
-# 32-bit installed apps
-Get-ItemProperty "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*" | select displayname
-# 64-bit installed apps
-Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*" | select displayname
 
 # Search whole drive for a file
 Get-ChildItem -Path C:\ -Recurse -Filter "procname.*" -File -Force -ErrorAction SilentlyContinue | Select-Object FullName
-```
 
-***
-
-## File Enumeration & RunAs
-
-```powershell
 # Search for KeePass databases
 Get-ChildItem -Path C:\ -Include *.kdbx -File -Recurse -ErrorAction SilentlyContinue
 
@@ -83,8 +83,6 @@ Get-ChildItem -Path C:\xampp -Include *.txt,*.ini -File -Recurse -ErrorAction Si
 ```
 
 **Runas:** Use when you have credentials for a user not in RDP/WinRM groups but have GUI access (RDP). Works with local or domain accounts.
-
-***
 
 ## PowerShell History & Logging
 
@@ -105,12 +103,3 @@ type C:\Users\dave\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\Conso
 
 ***
 
-## WinPEAS
-
-```powershell
-# winPEAS
-iwr -uri https://github.com/peass-ng/PEASS-ng/releases/download/20260417-9e62276b/winPEASx64.exe
-
-# Seatbelt (precompiled)
-# https://github.com/kraloveckey/ghostpack-binaries/tree/main/Seatbelt
-```

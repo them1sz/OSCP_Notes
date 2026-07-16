@@ -29,6 +29,7 @@
 ## Windows Privilege Escalation
 
 * [Preliminary Recon](windows-privesc/initial-enumeration.md)
+* [Note dump](windows-privilege-escalation/note-dump.md)
 * [Service Binary Hijacking](windows-privesc/service-binary-hijacking.md)
 * [DLL Hijacking](windows-privesc/dll-hijacking.md)
 * [Unquoted Service Paths](windows-privesc/unquoted-service-paths.md)
