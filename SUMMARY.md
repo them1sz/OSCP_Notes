@@ -28,7 +28,7 @@
 
 ## Windows Privilege Escalation
 
-* [Initial Enumeration](windows-privesc/initial-enumeration.md)
+* [Preliminary Recon](windows-privesc/initial-enumeration.md)
 * [Service Binary Hijacking](windows-privesc/service-binary-hijacking.md)
 * [DLL Hijacking](windows-privesc/dll-hijacking.md)
 * [Unquoted Service Paths](windows-privesc/unquoted-service-paths.md)
@@ -41,7 +41,7 @@
 * [Initial Enumeration](linux-privesc/initial-enumeration.md)
 * [Cron Jobs & Services](linux-privesc/cron-jobs-services.md)
 * [Password Files](linux-privesc/password-files.md)
-* [SUID / SGID / Capabilitie](linux-privesc/suid-sgid-capabilities.md)
+* [SUID / SGID / Capabilities](linux-privesc/suid-sgid-capabilities.md)
 * [Sudo Abuse](linux-privesc/sudo-abuse.md)
 * [Kernel Exploits](linux-privesc/kernel-exploits.md)
 
