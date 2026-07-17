@@ -29,7 +29,6 @@
 ## Windows Privilege Escalation
 
 * [Preliminary Recon](windows-privesc/initial-enumeration.md)
-* [Note dump](windows-privilege-escalation/note-dump.md)
 * [Service Binary Hijacking](windows-privesc/service-binary-hijacking.md)
 * [DLL Hijacking](windows-privesc/dll-hijacking.md)
 * [Unquoted Service Paths](windows-privesc/unquoted-service-paths.md)
@@ -57,9 +56,10 @@
 ## Active Directory
 
 * [Key Concepts & Architecture](active-directory/key-concepts.md)
-* [Initial Recon](active-directory/enumeration.md)
+* [Preliminary Recon](active-directory/enumeration.md)
 * [BloodHound](active-directory/bloodhound.md)
 * [Share Enumeration](active-directory/share-enumeration.md)
+* [Note dump](active-directory/note-dump.md)
 
 ## File Transfers
 

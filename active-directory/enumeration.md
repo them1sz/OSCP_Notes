@@ -1,6 +1,6 @@
-# Initial Recon
+# Preliminary Recon
 
-## net.exe
+### net.exe
 
 ```cmd
 net user /domain                        # all domain users
@@ -96,32 +96,5 @@ May contain GPP (Group Policy Preferences) encrypted passwords. Decrypt with:
 gpp-decrypt <cpassword-value>
 ```
 
-***
 
-## SharpHound & BloodHound
-
-```powershell
-# Collect AD data
-powershell -ep bypass
-Import-Module .\SharpHound.ps1
-Invoke-BloodHound -CollectionMethod All -OutputDirectory C:\Users\stephanie\Desktop\ -OutputPrefix "sharphound-results"
-```
-
-**Running SharpHound with specific credentials:**
-
-```powershell
-Invoke-BloodHound -CollectionMethod All -LdapUserName john -LdapPassword dqsTwTpZPn#nL -Domain beyond.com
-```
-
-```bash
-# Start neo4j and BloodHound on Kali
-sudo neo4j start           # default: neo4j:neo4j → change to trustno1
-bloodhound-start           # drag the zip file into BloodHound
-```
-
-> Mark every owned object in BloodHound to reveal attack paths. SharpHound results are only as good as the user who ran it — manually verify paths the tool might miss.
-
-### Share Enumeration
-
-`smbclient //192.168.201.97/test --user=secura.zyx/eric.wallows%EricLikesRunning800`
 

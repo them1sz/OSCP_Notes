@@ -1,13 +1,5 @@
 # Preliminary Recon
 
-Accessing Systems
-
-**Evil-WinRM (port 5985/5986):** Requires membership in **Remote Management Users** or **Administrators**.
-
-**RDP (port 3389):** Requires membership in **Remote Desktop Users** or **Administrators**. Also requires `SeRemoteInteractiveLogonRight` not be explicitly denied.
-
-***
-
 ### Windows Privileges & Access Controls
 
 **Security Identifiers (SIDs):** Format: `S-R-X-Y` where R=revision(1), X=authority(5=NT Authority), Y=sub-authorities+RID.
