@@ -36,7 +36,7 @@ sudo nmap -sS -sU <ip>
 
 #### &#x20;NMAP NSE Engine scripts&#x20;
 
-`` /usr/share/nmap/scripts/` ``&#x20;
+`/usr/share/nmap/scripts/`&#x20;
 
 Run a specific script or all scripts `sudo nmap --script="smtp-*" 192.168.182.189`
 

