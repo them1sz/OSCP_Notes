@@ -1,6 +1,6 @@
 # Interesting Filesystem folders
 
-#### MySQL - xampp
+#### MySQL - Xampp Folders&#x20;
 
 ```markdown
 xampp\mysql\data\<database-name>
@@ -18,3 +18,9 @@ xampp\mysql\data\creds\creds.ibd (binary file with credentials)
 .ssh/id_ed25519_sk
 ```
 
+#### Windows SAM files
+
+```
+C:\Windows\System32\SAM
+C:\Windows\System32\SYSTEM
+```

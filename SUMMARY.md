@@ -1,16 +1,19 @@
 # Table of contents
 
+## OSCP-B
+
 ## Information Gathering
 
 * [GitHub Recon](README.md)
 * [DNS Enumeration](information-gathering/dns-enumeration.md)
-* [Port Scanning](information-gathering/port-scanning.md)
 * [NetBIOS & SMB](information-gathering/netbios-smb.md)
+* [Port Scanning](information-gathering/port-scanning.md)
 * [SMTP Enumeration](information-gathering/smtp-enumeration.md)
 * [SNMP Enumeration](information-gathering/snmp-enumeration.md)
 * [WordPress Scanning](information-gathering/wordpress-scanning.md)
 * [NXC - Net Exec](information-gathering/nxc-net-exec.md)
 * [Interesting Filesystem folders](information-gathering/interesting-filesystem-folders.md)
+* [Exploit URLs](information-gathering/exploit-urls.md)
 * [Finding Exploits](information-gathering/finding-exploits.md)
 
 ## Web Attacks
@@ -41,7 +44,7 @@
 * [Initial Enumeration](linux-privesc/initial-enumeration.md)
 * [Cron Jobs & Services](linux-privesc/cron-jobs-services.md)
 * [Password Files](linux-privesc/password-files.md)
-* [SUID / SGID / Capabilities](linux-privesc/suid-sgid-capabilities.md)
+* [Searching for files](linux-privesc/suid-sgid-capabilities.md)
 * [Sudo Abuse](linux-privesc/sudo-abuse.md)
 * [Kernel Exploits](linux-privesc/kernel-exploits.md)
 
