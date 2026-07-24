@@ -1,8 +1,8 @@
 # Reverse Shells - Command Execution
 
 {% tabs %}
-{% tab title="PowerShell" %}
-
+{% tab title="revshells.com" %}
+**PowerShell #4 (Base64) (Most Effective For Windows)**
 {% endtab %}
 
 {% tab title="msfvenom" %}
