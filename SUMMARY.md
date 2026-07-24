@@ -72,7 +72,7 @@
 
 ***
 
-* [Various Reverse Shells](various-reverse-shells.md)
+* [Reverse Shells - Command Execution](reverse-shells-command-execution.md)
 
 ## Authentication Attacks
 
@@ -90,7 +90,7 @@
 
 ## Port Forwarding & Tunneling
 
-* [Socat](port-forwarding/socat.md)
+* [Socat Dynamic Tunneling](port-forwarding/socat.md)
 * [SSH Tunneling](port-forwarding/ssh-tunneling.md)
 * [sshuttle](port-forwarding/sshuttle.md)
 * [Chisel](port-forwarding/chisel.md)

