@@ -16,22 +16,6 @@ net accounts                            # account/password policy
 (Get-WmiObject Win32_ComputerSystem).PartOfDomain
 ```
 
-***
-
-## .NET — Find PDC
-
-```powershell
-[System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
-
-# Script to get LDAP path
-$PDC = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain().PdcRoleOwner.Name
-$DN = ([adsi]'').distinguishedName
-$LDAP = "LDAP://$PDC/$DN"
-$LDAP
-```
-
-***
-
 ## PowerView
 
 ```powershell
@@ -39,7 +23,7 @@ $LDAP
 powershell -ep bypass
 Import-Module .\PowerView.ps1
 
-Get-NetDomain                                          # domain info
+Get-NetDomain                                         # domain info
 Get-NetUser | Select cn                               # all usernames
 Get-NetUser | select cn,pwdlastset,lastlogon          # check dormant accounts
 Get-NetGroup | select cn                              # groups
