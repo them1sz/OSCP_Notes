@@ -7,3 +7,6 @@ nc -nv 192.168.50.8 25
 VRFY root
 VRFY idontexist
 ```
+
+**Automate checks with :** `smtp-user-enum`
+

