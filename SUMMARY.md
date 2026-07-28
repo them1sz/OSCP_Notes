@@ -43,7 +43,7 @@
 
 * [Initial Enumeration](linux-privesc/initial-enumeration.md)
 * [Cron Jobs & Services](linux-privesc/cron-jobs-services.md)
-* [Password Files](linux-privesc/password-files.md)
+* [/etc/passwd](linux-privesc/password-files.md)
 * [Searching for files](linux-privesc/suid-sgid-capabilities.md)
 * [Sudo Abuse](linux-privesc/sudo-abuse.md)
 * [Kernel Exploits](linux-privesc/kernel-exploits.md)
