@@ -50,7 +50,7 @@
 
 ## Password Attacks
 
-* [Brute Force Attacks](password-attacks/brute-force.md)
+* [Bruteforce Attacks](password-attacks/brute-force.md)
 * [Hash Cracking](password-attacks/hash-cracking.md)
 * [Mimikatz & Windows Hashes](password-attacks/mimikatz-windows-hashes.md)
 * [Pass-the-Hash](password-attacks/pass-the-hash.md)
