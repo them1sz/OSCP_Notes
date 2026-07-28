@@ -61,6 +61,7 @@
 * [Key Concepts & Architecture](active-directory/key-concepts.md)
 * [Preliminary Recon](active-directory/enumeration.md)
 * [BloodHound](active-directory/bloodhound.md)
+* [Methodology](active-directory/methodology.md)
 * [Share Enumeration](active-directory/share-enumeration.md)
 * [Note dump](active-directory/note-dump.md)
 
