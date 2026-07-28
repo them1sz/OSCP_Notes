@@ -18,6 +18,9 @@ git log -p --all --full-history
 # Display one-line log with graph (visualize branches)
 git log --oneline --graph --all --decorate
 
+# Show specific commit 
+git show <commit-hash>
+
 # Grep history for useful keywords
 git log --all --grep="password\|secret\|key\|token\|api_key\|credential\|auth"
 ```
