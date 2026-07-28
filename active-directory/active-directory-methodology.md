@@ -8,8 +8,10 @@ ldapdomaindump ?
 
 # Check SYSVOL through SMB to DC
 \\dc1.corp.com\sysvol\corp.com\ 
-# In case any policy is found
+# In case any .gpp file is found
 gpp-decrypt <cpassword-value>
+
+
 
 
 
