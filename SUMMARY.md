@@ -60,6 +60,7 @@
 
 * [Key Concepts & Architecture](active-directory/key-concepts.md)
 * [Preliminary Recon](active-directory/enumeration.md)
+* [Active Directory Methodology](active-directory/active-directory-methodology.md)
 * [BloodHound](active-directory/bloodhound.md)
 * [Methodology](active-directory/methodology.md)
 * [Share Enumeration](active-directory/share-enumeration.md)
