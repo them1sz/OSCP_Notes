@@ -60,17 +60,21 @@ nxc smb <DC_IP> -u stephanie -p 'LegmanTeamBenzoin!!' --users | awk '$6 ~ /^[0-9
 
 ### Enumerate Share Access&#x20;
 
+{% tabs %}
+{% tab title="Password" %}
 ```shellscript
 nxc smb domain-ips.txt -u stephanie -p 'LegmanTeamBenzoin!!' --shares
 ```
+{% endtab %}
 
-### Enumerate Share Access using PtH
-
-```shellscript
+{% tab title="NTLM-Hash" %}
+```bash
 proxychains4 nxc smb domain-hosts.txt -H fdf36048c1cf88f5630381c5e38feb8e -u wario -d medtech.com --shares
 ```
+{% endtab %}
+{% endtabs %}
 
-#### List shares using a local user on a specific machine
+### List shares using a local user on a specific machine
 
 ```shellscript
 nxc smb 192.168.201.96 -u apache -p 'New2Era4.!' --local-auth --shares
