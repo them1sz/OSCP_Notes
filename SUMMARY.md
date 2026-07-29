@@ -63,7 +63,7 @@
 * [Active Directory Methodology](active-directory/active-directory-methodology.md)
 * [BloodHound](active-directory/bloodhound.md)
 * [Methodology](active-directory/methodology.md)
-* [Share Enumeration](active-directory/share-enumeration.md)
+* [SMBCLIENT](active-directory/smbclient.md)
 * [Note dump](active-directory/note-dump.md)
 
 ## File Transfers
