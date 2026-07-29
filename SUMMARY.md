@@ -11,7 +11,6 @@
 * [SMTP Enumeration](information-gathering/smtp-enumeration.md)
 * [SNMP Enumeration](information-gathering/snmp-enumeration.md)
 * [WordPress Scanning](information-gathering/wordpress-scanning.md)
-* [NXC - Net Exec](information-gathering/nxc-net-exec.md)
 * [Common Exploit URLs](information-gathering/common-exploit-urls.md)
 * [Searchsploit](information-gathering/searchsploit.md)
 * [Interesting Filesystem folders](information-gathering/interesting-filesystem-folders.md)
@@ -64,6 +63,8 @@
 * [BloodHound](active-directory/bloodhound.md)
 * [Methodology](active-directory/methodology.md)
 * [SMBCLIENT](active-directory/smbclient.md)
+* [NXC - Net Exec](active-directory/nxc-net-exec.md)
+* [Impacket](active-directory/impacket.md)
 * [Note dump](active-directory/note-dump.md)
 
 ## File Transfers
