@@ -54,11 +54,19 @@ nxc mssql 192.168.201.96 -u sa -p 'password' --local-auth
 
 ### Find All Domain Users
 
+
+
 ```shellscript
 nxc smb <DC_IP> -u stephanie -p 'LegmanTeamBenzoin!!' --users | awk '$6 ~ /^[0-9]{4}-/ {print $5}' > domain-users.txt
 ```
 
-### Enumerate Share Access&#x20;
+### Check Password Policy
+
+```bash
+nxc smb <DC_IP> -u stephanie -p 'LegmanTeamBenzoin!!' --pass-pol
+```
+
+### Enumerate Share Access
 
 {% tabs %}
 {% tab title="Password" %}

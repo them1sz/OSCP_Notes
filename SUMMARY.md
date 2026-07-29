@@ -78,7 +78,6 @@
 
 ## Authentication Attacks
 
-* [Password Spraying](active-directory/auth-attacks/password-spraying.md)
 * [AS-REP Roasting](active-directory/auth-attacks/asrep-roasting.md)
 * [Kerberoasting](active-directory/auth-attacks/kerberoasting.md)
 * [Silver Tickets](active-directory/auth-attacks/silver-tickets.md)
