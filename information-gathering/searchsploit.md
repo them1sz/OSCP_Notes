@@ -1,6 +1,4 @@
-# Finding Exploits
-
-#### SearchSploit
+# Searchsploit
 
 ```shellscript
 searchsploit apache 2.4.49

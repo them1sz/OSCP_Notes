@@ -12,7 +12,7 @@
 * [SNMP Enumeration](information-gathering/snmp-enumeration.md)
 * [WordPress Scanning](information-gathering/wordpress-scanning.md)
 * [NXC - Net Exec](information-gathering/nxc-net-exec.md)
-* [Exploit URLs](information-gathering/exploit-urls.md)
+* [Common Exploit URLs](information-gathering/common-exploit-urls.md)
 * [Searchsploit](information-gathering/searchsploit.md)
 * [Interesting Filesystem folders](information-gathering/interesting-filesystem-folders.md)
 
