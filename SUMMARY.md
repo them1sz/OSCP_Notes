@@ -68,7 +68,7 @@
 
 ## File Transfers
 
-* [File Transfering & Downloading](file-transfers/capstone-notes.md)
+* [File Sharing/Downloading](file-transfers/capstone-notes.md)
 
 ## Reverse Shells
 
