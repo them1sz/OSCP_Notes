@@ -2,7 +2,7 @@
 
 Services with insecure binary permissions can be replaced with malicious executables.
 
-**Enumerate running services with paths:**
+#### Recon if RDP is available
 
 ```powershell
 Get-CimInstance -ClassName win32_service | Select Name,State,PathName,StartName | Where-Object {$_.State -like 'Running'}
@@ -45,7 +45,7 @@ x86_64-w64-mingw32-gcc malicious.c -o malicious.exe   # 64-bit
 i686-w64-mingw32-gcc malicious.c -o malicious.exe      # 32-bit
 ```
 
-**Service control:**
+### **Start & Stop services and Reboot**
 
 ```cmd
 net stop mysqld
