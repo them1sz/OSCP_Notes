@@ -23,4 +23,7 @@ xampp\mysql\data\creds\creds.ibd (binary file with credentials)
 ```
 C:\Windows\System32\SAM
 C:\Windows\System32\SYSTEM
+
+C:\Windows\System32\config\SAM
+C:\Windows\System32\config\SYSTEM
 ```
