@@ -1,18 +1,20 @@
 # Port Scanning
 
-**Netcat TCP scan:**
+### **Netcat**&#x20;
+
+**TCP scan**
 
 ```bash
-for port in $(seq 1 1000); do nc -nvvz -w 1 <ip> $port; done
+for port in $(seq 1 1000); do nc -nvvz -w 1 <ip> $port; done 
 ```
 
-**Netcat UDP scan:**
+**UDP scan**
 
 ```bash
 for port in $(seq 1 100); do nc -nvvzu -w 1 <ip> $port; done
 ```
 
-#### NMAP scanning
+### NMAP scanning
 
 ```bash
 # Host discovery ping sweep
@@ -25,7 +27,7 @@ sudo nmap -sS -p- --max-retries 2 --min-rate 1000 <ip>
 sudo nmap -sS -sU <ip>
 ```
 
-**Useful Nmap flags:**
+#### **Useful Nmap flags**
 
 * `--min-rate 1000` — enforces minimum probe rate (overrides congestion throttling)
 * `--max-rtt-timeout 200ms` — cap wait time on unresponsive ports
@@ -40,15 +42,13 @@ sudo nmap -sS -sU <ip>
 
 Run a specific script or all scripts `sudo nmap --script="smtp-*" 192.168.182.189`
 
-
-
-#### Nmap over socks5 proxy
+### Nmap over socks5 proxy
 
 ```bash
 sudo nmap -sT -v -n <ip-address> -oN scan.nmap -Pn
 ```
 
-**PowerShell Port Scanning:**
+### **PowerShell**&#x20;
 
 ```powershell
 # Single port
