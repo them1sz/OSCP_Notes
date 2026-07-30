@@ -1,7 +1,5 @@
 # Table of contents
 
-## OSCP-B
-
 ## Information Gathering
 
 * [GitHub Recon](README.md)

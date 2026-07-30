@@ -8,7 +8,7 @@
 sudo nbtscan -r <subnet>
 ```
 
-**Windows SMB enumeration:**
+### **SMB enumeration (cmd)**
 
 ```cmd
 net view                  # list machines visible to this host
@@ -18,9 +18,7 @@ net view \\dc1 /all       # list all shares on dc1 (admin shares end with $)
 
 **Automation tools:** `enum4linux`, `nxc` (NetExec/CrackMapExec replacement)
 
-
-
-#### Enum4Linux - Unauthenticated recon
+### Enum4Linux - Unauthenticated recon
 
 ```bash
 ## Works best when guest access or null authentication in a share is supported
@@ -29,7 +27,7 @@ net view \\dc1 /all       # list all shares on dc1 (admin shares end with $)
 enum4linux <domain-joined-ip-address>
 ```
 
-#### Connect to a specific share authenticated
+### Connect to a specific share authenticated
 
 ```bash
 smbclient //172.16.129.83/C -U medtech.com/wario%Mushroom!
