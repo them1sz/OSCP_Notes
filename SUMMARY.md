@@ -8,7 +8,7 @@
 * [Port Scanning](information-gathering/port-scanning.md)
 * [SMTP Enumeration](information-gathering/smtp-enumeration.md)
 * [SNMP Enumeration](information-gathering/snmp-enumeration.md)
-* [WordPress Scanning](information-gathering/wordpress-scanning.md)
+* [WordPress](information-gathering/wordpress-scanning.md)
 * [Common Exploit URLs](information-gathering/common-exploit-urls.md)
 * [Searchsploit](information-gathering/searchsploit.md)
 * [Interesting Filesystem folders](information-gathering/interesting-filesystem-folders.md)
