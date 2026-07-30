@@ -30,6 +30,7 @@
 
 * [Preliminary Recon](windows-privesc/initial-enumeration.md)
 * [Service Binary Hijacking](windows-privesc/service-binary-hijacking.md)
+* [Enabling RDP](windows-privilege-escalation/enabling-rdp.md)
 * [DLL Hijacking](windows-privesc/dll-hijacking.md)
 * [Unquoted Service Paths](windows-privesc/unquoted-service-paths.md)
 * [Scheduled Tasks](windows-privesc/scheduled-tasks.md)
