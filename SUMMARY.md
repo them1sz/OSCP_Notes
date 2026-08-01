@@ -4,7 +4,6 @@
 
 * [GitHub Recon](README.md)
 * [DNS Enumeration](information-gathering/dns-enumeration.md)
-* [Notes - Thoughts](information-gathering/notes-thoughts.md)
 * [NetBIOS & SMB](information-gathering/netbios-smb.md)
 * [Port Scanning](information-gathering/port-scanning.md)
 * [SMTP Enumeration](information-gathering/smtp-enumeration.md)
@@ -13,6 +12,7 @@
 * [Common Exploit URLs](information-gathering/common-exploit-urls.md)
 * [Searchsploit](information-gathering/searchsploit.md)
 * [Interesting Filesystem folders](information-gathering/interesting-filesystem-folders.md)
+* [Notes - Thoughts](information-gathering/notes-thoughts.md)
 
 ## Web Attacks
 
