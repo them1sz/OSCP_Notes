@@ -1,13 +1,13 @@
-# Searching for files
+# Finding Files
 
-**Find SUID binaries:**
+**SUID binaries:**
 
 ```bash
 find / -perm -u=s -type f 2>/dev/null
 find / -perm -4000 2>/dev/null
 ```
 
-**Find SGID binaries/directories:**
+**SGID binaries:**
 
 ```bash
 find / -perm -2000 2>/dev/null
@@ -33,4 +33,18 @@ find / -group user -perm -g=w 2>/dev/null
 
 ```bash
 find / -type f -user root -name *.sh 2>/dev/null
+```
+
+```bash
+# ALL PERMS
+find / -perm -777 -type f 2>/dev/null
+
+# Writables for current user/group
+find / perm /u=w -user `whoami` 2>/dev/null
+find / -perm /u+w,g+w -f -user `whoami` 2>/dev/null
+find / -perm /u+w -user `whoami` 2>/dev/nul
+
+# Dirs with +w perms for current u/g
+find / perm /u=w -type -d -user `whoami` 2>/dev/null
+find / -perm /u+w,g+w -d -user `whoami` 2>/dev/null
 ```
