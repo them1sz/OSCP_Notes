@@ -21,10 +21,13 @@ net view \\dc1 /all       # list all shares on dc1 (admin shares end with $)
 ### Enum4Linux - Unauthenticated recon
 
 ```bash
-## Works best when guest access or null authentication in a share is supported
-## Gathers various information (password policy, domain info etc)
-## By default it runs all checks 
+# Works best when guest access or null authentication in a share is supported
+# Gathers various information (password policy, domain info etc)
+# By default it runs all checks 
 enum4linux <domain-joined-ip-address>
+
+# Extended version
+enum4linux -a -M -l -d <dc-address>
 ```
 
 ### Connect to a specific share authenticated
