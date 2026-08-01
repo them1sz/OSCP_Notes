@@ -43,7 +43,7 @@ Get-ChildItem -Force | Format-List -Property Name, Attributes
 ### Registry Enumeration
 
 {% tabs %}
-{% tab title="CMD" %}
+{% tab title="PowerShell / CMD" %}
 ```powershell
 # 32-bit installed apps
 Get-ItemProperty "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*" | select displayname
@@ -51,10 +51,13 @@ Get-ItemProperty "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Un
 # 64-bit installed apps
 Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*" | select displayname
 
+# WinLogon
+reg query "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon"
+
 ```
 {% endtab %}
 
-{% tab title="PowerShell" %}
+{% tab title="-" %}
 ```powershell
 ```
 {% endtab %}
