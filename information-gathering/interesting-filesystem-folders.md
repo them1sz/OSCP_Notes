@@ -28,7 +28,7 @@ C:\Windows\System32\config\SAM
 C:\Windows\System32\config\SYSTEM
 ```
 
-### Windows Filesystem Folders
+### Windows Hidden
 
 ```
 C:\ProgramData (Can contain program(s) and ssh configuration)
