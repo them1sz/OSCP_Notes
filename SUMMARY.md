@@ -4,6 +4,7 @@
 
 * [GitHub Recon](README.md)
 * [DNS Enumeration](information-gathering/dns-enumeration.md)
+* [Notes - Thoughts](information-gathering/notes-thoughts.md)
 * [NetBIOS & SMB](information-gathering/netbios-smb.md)
 * [Port Scanning](information-gathering/port-scanning.md)
 * [SMTP Enumeration](information-gathering/smtp-enumeration.md)
