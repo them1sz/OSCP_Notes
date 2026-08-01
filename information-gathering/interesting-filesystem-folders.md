@@ -27,3 +27,9 @@ C:\Windows\System32\SYSTEM
 C:\Windows\System32\config\SAM
 C:\Windows\System32\config\SYSTEM
 ```
+
+### Windows Filesystem Folders
+
+```
+C:\ProgramData (Can contain program(s) and ssh configuration)
+```
