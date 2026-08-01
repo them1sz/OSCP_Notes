@@ -20,3 +20,10 @@ SELECT column_name FROM information_schema.columns WHERE table_name = 'users';
 # Print specific columns from a table
 SELECT username,email,password_hash FROM users;
 ```
+
+### Impacket changepasswd
+
+```
+# In case an identified user needs to have a password change before login
+impacket-changepasswd 'domain/d.user':'OldPassword'@<ip> -newpass Themis123!
+```
