@@ -23,6 +23,9 @@ sudo nmap -sn 192.168.50.0/24 -oA sweep-scan -vv
 # Full TCP scan with performance flags
 sudo nmap -sS -p- --max-retries 2 --min-rate 1000 <ip>
 
+# TCP Service scan complete
+sudo nmap -sCV -Pn -p- -n -T4 --min-rate 1000 -v --stats-every 10s -oN tcpall.nmap --open <ip>
+
 # Combined TCP + UDP
 sudo nmap -sS -sU <ip>
 ```
