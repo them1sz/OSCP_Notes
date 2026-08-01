@@ -63,7 +63,7 @@ reg query "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon"
 {% endtab %}
 {% endtabs %}
 
-### File Searching
+### Searching for Various Files
 
 ```powershell
 
