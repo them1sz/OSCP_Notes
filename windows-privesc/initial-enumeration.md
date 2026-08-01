@@ -94,6 +94,14 @@ Get-History         # view
 type C:\Users\dave\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
 ```
 
+**Local Administrator Enumeration**
+
+When we have local admin rights on a system we can query the powershell history for all users at once to examine it.
+
+```powershell
+Get-ChildItem C:\Users\*\AppData\Roaming\Microsoft\Windows\PowerShell\RSReadline\ConsoleHost_history.txt -ErrorAction SilentyContinue | Get-Content
+```
+
 **Script Block Logging:** `Event Viewer > Application and Services Logs > Microsoft > Windows > PowerShell > Operational` Search strings: `cred`, `convert` to find password-related activity.
 
 ***
