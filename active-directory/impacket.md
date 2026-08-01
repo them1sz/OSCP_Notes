@@ -19,8 +19,4 @@ SELECT column_name FROM information_schema.columns WHERE table_name = 'users';
 
 # Print specific columns from a table
 SELECT username,email,password_hash FROM users;
-
-
-
-
 ```
