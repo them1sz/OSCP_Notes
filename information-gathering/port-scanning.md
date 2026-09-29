@@ -19,6 +19,8 @@ for port in $(seq 1 100); do nc -nvvzu -w 1 <ip> $port; done
 ```bash
 # Host discovery ping sweep
 sudo nmap -sn 192.168.50.0/24 -oA sweep-scan -vv
+# Host discovery (also SMB)
+sudo nmap -sn -PS445 -iL hosts.txt > alive-hosts.txt
 
 # Full TCP scan with performance flags
 sudo nmap -sS -p- --max-retries 2 --min-rate 1000 <ip>
